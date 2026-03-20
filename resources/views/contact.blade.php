@@ -1,10 +1,9 @@
-<x-layout title="Contact"> 
-    
+<x-layout title="Contact Us"> 
     <h1>Contact Us</h1>
 
-    <div>
+    <x-card class="max-w-400">
         <p>Placeholder for the contact form.</p>
         <a href="/">Return Home</a>
-    </div>
+    </x-card>
 
 </x-layout>
