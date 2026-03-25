@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome');
+Route::view('/', 'welcome', [
+'greetings' => 'Hello',
+'person' => request('person'),
+ ]); 
 
 Route::view('/about', 'about');
 
