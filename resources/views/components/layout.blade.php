@@ -8,6 +8,18 @@
     <title>{{ $title }}</title>
    
       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .max-w-1000 {
+            max-width: 00px;
+            margin: auto;
+        }
+
+        .card {
+            background: #e3e3e369;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
 
     
 </head>
