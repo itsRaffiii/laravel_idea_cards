@@ -7,23 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title }}</title>
    
-    <style>
-        .max-w-400 {
-            max-width: 400px;
-            margin: auto;
-        }
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-        .card {
-            background: #e3e3e369;
-            padding: 1rem;
-            text-align: center;
-        }
-    </style>
-
+    
 </head>
-<body>
 
-    <nav>
+<body class="bg-gray-700 p-6 max-w-xl mx-auto" >
+
+    <nav style="color: aliceblue;">
         <a href="/">HomePage</a>
         <a href="/about">About Us</a>
         <a href="/contact">Contact Us</a>
