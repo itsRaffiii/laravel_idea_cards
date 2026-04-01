@@ -8,8 +8,8 @@
     <title>{{ $title }}</title>
    
     <style>
-        .max-w-400 {
-            max-width: 400px;
+        .max-w-1000 {
+            max-width: 00px;
             margin: auto;
         }
 
