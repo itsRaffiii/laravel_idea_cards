@@ -1,30 +1,27 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\Models\Idea;
 
-Route::view('/', 'welcome', [
-'greetings' => 'Hello',
-'person' => request('person'),
- ]); 
-
-
+//For Nav Bar
 Route::view('/about', 'about');
 
-Route::view('/contact', 'contact');  
-
-
+Route::view('/contact', 'contact'); 
 
 Route::get('/', function () {
-    $ideas = session()->get('idea', []);
-    // dump($ideas);
+    
+    $ideas = Idea::query()
+    ->when(request('state'), function ($query, $state) {
+        $query->where('state', $state);
+    })
+    ->get();
 
     return view('ideas', [
         'ideas' => $ideas,
     ]);
 
 });
-
-
 
 Route::get('/delete-ideas', function () {
     session()->forget('idea');
@@ -33,10 +30,11 @@ Route::get('/delete-ideas', function () {
 });
 
 Route::post('/ideas', function () {
-    $idea = request('idea');
+    Idea::create([
+        'description' => request('idea'),
+        'state' => 'pending',
 
-    session()->push('idea', $idea);
-    // dump($idea);
+    ]);
 
     return redirect('/');
 
