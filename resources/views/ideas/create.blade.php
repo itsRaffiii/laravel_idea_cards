@@ -1,7 +1,7 @@
 <x-layout>
 
         </br>
-        <form method="POST" action="/ideas">
+         nm m m <form method="POST" action="/ideas">
                 @csrf
 
                 <div class="col-span-full">
