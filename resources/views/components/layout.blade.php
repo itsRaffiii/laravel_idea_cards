@@ -24,9 +24,13 @@
 
 </head>
 
-<body class="bg-gray-700 p-6 max-w-xl mx-auto" >
+<body class="bg-gray-700 p-6 max-w-xl mx-auto text-white" >
 
-    <nav style="color: aliceblue;">
+    <nav style="color: aliceblue;
+                display: flex;
+                justify-content: center;
+                gap: 20px;">
+
         <a href="/ideas">HomePage</a>
         <a href="/about">About Us</a>
         <a href="/contact">Contact Us</a>
