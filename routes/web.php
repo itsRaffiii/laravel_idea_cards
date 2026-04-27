@@ -1,16 +1,9 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\SessionsController;
 use App\Http\Controllers\IdeaController;
 use Illuminate\Support\Facades\Route;
-
-//for Nav Bar
-Route::view('/ideas', 'home');
-
-Route::view('/about', 'about');
-
-Route::view('/contact', 'contact');
-
-
 //for index
 Route::get('/ideas', [IdeaController::class, 'index']);
 
@@ -32,4 +25,11 @@ Route::patch('/ideas/{idea}', [IdeaController::class, 'update']);
 //destroy
 Route::delete('/ideas/{idea}', [IdeaController::class, 'destroy']);
 
+//register
+Route::get('/register', [RegisteredUserController::class, 'create']);
+Route::post('/register', [RegisteredUserController::class, 'store']);
+
+Route::get('/login', [SessionsController::class, 'create']);
+Route::post('/login', [SessionsController::class, 'store']);
+Route::delete('/logout', [SessionsController::class, 'destroy']);
 

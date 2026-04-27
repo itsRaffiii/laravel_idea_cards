@@ -1,44 +1,21 @@
 @props(['title' => 'Laravel Idea'])
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dracula">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title }}</title>
-
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        .max-w-1000 {
-            max-width: 00px;
-            margin: auto;
-        }
-
-        .card {
-            background: #e3e3e369;
-            padding: 1rem;
-            text-align: center;
-        }
-    </style>
-
-
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="bg-gray-700 p-6 max-w-xl mx-auto text-white" >
-
-    <nav style="color: aliceblue;
-                display: flex;
-                justify-content: center;
-                gap: 20px;">
-
-        <a href="/ideas">HomePage</a>
-        <a href="/about">About Us</a>
-        <a href="/contact">Contact Us</a>
-    </nav>
-
-    <main>
+<body>
+    <x-nav />
+</div>
+    <main class="max-w-3xl mx-auto mt-6">
         {{$slot}}
     </main>
-
 </body>
 </html>
