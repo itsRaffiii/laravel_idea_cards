@@ -4,8 +4,9 @@
          <form method="POST" action="/ideas">
                 @csrf
 
+             <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 mx-auto">
                 <div class="col-span-full">
-                    <label for="description" class="block text-sm/6 font-medium text-white">Create New Idea</label>
+                    <legend class="fieldset-legend">Create New Idea</legend>
                             <div class="mt-2">
                                     <textarea id="description" name="description" rows="3"
                                               class="textarea w-full @error('description') textarea-error @enderror"
@@ -22,6 +23,7 @@
                             Save
                         </button>
                 </div>
+             </fieldset>
         </form>
 
 </x-layout>
